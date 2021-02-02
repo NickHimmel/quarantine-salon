@@ -2,11 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {
+  HashRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import NavBar from './components/NavBar';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <App />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
