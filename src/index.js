@@ -8,6 +8,7 @@ import {
   Route
 } from "react-router-dom";
 import NavBar from './components/NavBar';
+import Art from './components/Art';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -18,6 +19,9 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/">
             <App />
+          </Route>
+          <Route path="/art">
+            <Art />
           </Route>
         </Switch>
       </div>
