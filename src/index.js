@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
 import NavBar from './components/NavBar';
 import Art from './components/Art';
+import Search from './components/Search';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -22,6 +23,9 @@ ReactDOM.render(
           </Route>
           <Route path="/art">
             <Art />
+          </Route>
+          <Route path="/search">
+            <Search />
           </Route>
         </Switch>
       </div>
