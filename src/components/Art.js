@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const SearchBar = () => {
+    let history = useHistory();
     const [search, setSearch] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(`Searching for ${search}`);
+        history.push(`/search?q=${search}`);
     }
 
     return (
@@ -26,9 +28,9 @@ const SearchBar = () => {
 
 function Art() {
     return (
-        <nav>
+        <div>
             <SearchBar />
-        </nav>
+        </div>
     );
   }
   
